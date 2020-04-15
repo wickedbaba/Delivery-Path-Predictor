@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
 struct data{
 	int obs;
 	char a[100];
@@ -10,7 +9,6 @@ struct data{
 	int d;
 	int e;
 };
-
 struct data def;
 void removeSpaces(char line[]){
 	
