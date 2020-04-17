@@ -2,17 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include "Project.h"
-employee empF;
-customer custF;
-struct data{
-	int obs;
-	char a[100];
-	char b[100];
-	char c[100];
-	int d;
-	int e;
-};
-struct data def;
+employee empM[100];
+customer custM[100];
 void removeSpaces(char line[]){
 	
 int i=0;
@@ -63,35 +54,72 @@ void ReadEmployeeData(){
 	FILE *fp;
 	fp=fopen("employee.csv","r");
 	char x[100];
-			while(fgets(x,100,fp)!=NULL){
-			
+			// while(
+			fgets(x,100,fp);
+			fgets(x,100,fp);
+			//!=NULL){
+			printf("%s\n",x);
 			removeCommas(x);
 			printf("\n");
-			sscanf(x,"%d %s % %s %d %d",&(empF.employee_id),empF.emplyee_name,&(empF.phno),empF.shift);
-			printf("%d\n",def.obs);
-			printf("%s\n",def.a);
-			printf("%s\n", def.b);
-			printf("%s\n", def.c);
-			printf("%d\n",def.d);
-			printf("%d\n",def.e);
+			sscanf(x,"%d %s %ld %s",&(empF.employee_id),empF.employee_name,&(empF.phno),empF.shift);
+			printf("%d\n",empF.employee_id);
+			printf("%s\n",empF.employee_name);
+			printf("%ld\n",empF.phno);
+			printf("%s\n",empF.shift);
+			fclose(fp);
 		
-		// 
 }
 
+void ReadCustomerData()
+{
+	FILE *fp;
+	fp=fopen("customer.csv","r");
+	char x[100];
+			fgets(x,100,fp);
+			removeCommas(x);
+			printf("\n");
+			sscanf(x,"%d %s %s %f %d %s %s %d",&(custF.customer_id),custF.cust_name,custF.item,&(custF.item_price),&(custF.code),custF.email_ID,custF.address,&(custF.pincode));
+			printf("%d\n", custF.customer_id);
+			printf("%s\n",custF.cust_name);
+			printf("%s\n", custF.item);
+			printf("%f\n", custF.item_price);
+			printf("%d\n",custF.code);
+			printf("%s\n",custF.email_ID);
+			printf("%s\n",custF.address);
+			printf("%d\n", custF.pincode);
+			fclose(fp);
 }
-// void ReadCustomerData(char x[]){
 
-// }
 // void PrintEmpData()
 // void WriteEmployeeData()
-void findData(){
+// void findData(){
 
-}
+// }
+void add_last(del **head,employee e,customer c){
+	del *ptr=(del*)malloc(sizeof(del));
+	ptr->priority=0;
+	emp=e;
+	cus=c;
+	if(*head==NULL){
+		*head=ptr;
+		ptr->next=NULL;
+	}
+	else{
+		node *crt=*head;
+		while(crt->next!=NULL){
+			crt=crt->next;
+
+		}
+		crt->next=ptr;
+		ptr->next=NULL;
+	}
+
+} 
 int main(int argc, char const *argv[])
 {
-	FILE *fp; //a file pointer 
-	fp=fopen("test.csv","a+"); //opening file in append mode
-	char x[100];
+	//FILE *fp; //a file pointer 
+	//fp=fopen("test.csv","a+"); //opening file in append mode
+	//char x[100];
 	
 // 		while(fgets(x,100,fp)!=NULL){
 			
@@ -108,8 +136,17 @@ int main(int argc, char const *argv[])
 // 		// 
 // }
 	
-	fclose(fp);
-	
+	//fclose(fp);
+	node *head=NULL;	
+	FILE *fp;
+	fcust=fopen("customer.csv","r");
+	char x[100];
+	while(fgets(x,100,fp)!=NULL){
+		removeCommas(x);
+
+
+	}
+
 	
 	return 0;
 }

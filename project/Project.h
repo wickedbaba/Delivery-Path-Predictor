@@ -3,7 +3,7 @@
 typedef struct employee
 {
     int employee_id;
-    char emplyee_name[20];
+    char employee_name[20];
     long int  phno;
     char shift[10];
 }employee;
@@ -15,9 +15,10 @@ typedef struct customer
     char item[25];
     float item_price;
     int code; //so this code represents whether the item is fragile or not 0 is fragile and 1 for not fragile if you want we can change it to char
-    int phno;
+    //int phno;
     char email_ID[30];
     char address[20];
+    int pincode;
 }customer;
 
 typedef struct delivery
