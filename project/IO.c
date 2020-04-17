@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "Project.h"
+employee empF;
+customer custF;
 struct data{
 	int obs;
 	char a[100];
@@ -56,28 +59,57 @@ void removeCommas(char line[]){
 		i++;
 	}
 }		
-int main(int argc, char const *argv[])
-{
-	FILE *fp; //a file pointer 
-	fp=fopen("test.csv","r"); //opening file in read mode
+void ReadEmployeeData(){		
+	FILE *fp;
+	fp=fopen("employee.csv","r");
 	char x[100];
-	printf("%s\n",a);
-		while(fgets(x,100,fp)!=NULL){
+			while(fgets(x,100,fp)!=NULL){
 			
-		removeCommas(x);
-		printf("\n");
-		sscanf(x,"%d %s %s %s %d %d",&(def.obs),def.a,def.b,def.c,&(def.d),&(def.e));
-		printf("%d\n",def.obs);
-		printf("%s\n",def.a);
-		printf("%s\n", def.b);
-		printf("%s\n", def.c);
-		printf("%d\n",def.d);
-		printf("%d\n",def.e);
+			removeCommas(x);
+			printf("\n");
+			sscanf(x,"%d %s % %s %d %d",&(empF.employee_id),empF.emplyee_name,&(empF.phno),empF.shift);
+			printf("%d\n",def.obs);
+			printf("%s\n",def.a);
+			printf("%s\n", def.b);
+			printf("%s\n", def.c);
+			printf("%d\n",def.d);
+			printf("%d\n",def.e);
 		
 		// 
 }
+
+}
+// void ReadCustomerData(char x[]){
+
+// }
+// void PrintEmpData()
+// void WriteEmployeeData()
+void findData(){
+
+}
+int main(int argc, char const *argv[])
+{
+	FILE *fp; //a file pointer 
+	fp=fopen("test.csv","a+"); //opening file in append mode
+	char x[100];
+	
+// 		while(fgets(x,100,fp)!=NULL){
+			
+// 		removeCommas(x);
+// 		printf("\n");
+// 		sscanf(x,"%d %s %s %s %d %d",&(def.obs),def.a,def.b,def.c,&(def.d),&(def.e));
+// 		printf("%d\n",def.obs);
+// 		printf("%s\n",def.a);
+// 		printf("%s\n", def.b);
+// 		printf("%s\n", def.c);
+// 		printf("%d\n",def.d);
+// 		printf("%d\n",def.e);
+		
+// 		// 
+// }
 	
 	fclose(fp);
-
+	
+	
 	return 0;
 }

@@ -4,8 +4,8 @@ typedef struct employee
 {
     int employee_id;
     char emplyee_name[20];
-    int  phno;
-    char shift{10];
+    long int  phno;
+    char shift[10];
 }employee;
 
 typedef struct customer
@@ -25,7 +25,7 @@ typedef struct delivery
     employee emp;//so this is to have all the employee fields inside
     customer cust;//""""" customer"""
     int priority;
-    struct delivery next;
+    struct delivery *next;
 }del;
 
 //Basically we could have done with just a single structure but if we are linking a database we need multiple structures to access the databases
@@ -37,7 +37,7 @@ employee getemployee(customer); //so this function will return the employee assi
 //Queue functions so these functions for a particular employee will make the list of customers for that day we get one prob here that database has to be updated daily
 void createpqueue();
 void push();//insertion in the queue
-delivery *pop();
+del *pop();
 void assign_priority();// Yet to be decided decide asap
 void display_list(employee);
 // So these functions will be in an loop which will be traversing through the employee database and we will have to make different queues for different employees
