@@ -6,6 +6,7 @@ typedef struct employee
     char employee_name[20];
     long int  phno;
     char shift[10];
+    int area_code;
 }employee;
 
 typedef struct customer
@@ -55,3 +56,7 @@ int Isempty();
 
 // So basically we have 10 major functions in the program so we have to work accordingly these function we'll divide and then compile inside main
 // Also think about how our main function should look All the printf should be used carefully because the output should look good
+
+
+
+//input output csv

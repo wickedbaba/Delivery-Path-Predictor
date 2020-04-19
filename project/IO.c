@@ -2,8 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include "Project.h"
-employee empM[100];
-customer custM[100];
+int firste=0;
+int firstc=0;
 void removeSpaces(char line[]){
 	
 int i=0;
@@ -50,71 +50,100 @@ void removeCommas(char line[]){
 		i++;
 	}
 }		
-void ReadEmployeeData(){		
-	FILE *fp;
-	fp=fopen("employee.csv","r");
+employee ReadEmployeeData(FILE *f){		
+	employee empF;
 	char x[100];
-			// while(
-			fgets(x,100,fp);
-			fgets(x,100,fp);
-			//!=NULL){
-			printf("%s\n",x);
+			fgets(x,100,f);
 			removeCommas(x);
 			printf("\n");
-			sscanf(x,"%d %s %ld %s",&(empF.employee_id),empF.employee_name,&(empF.phno),empF.shift);
-			printf("%d\n",empF.employee_id);
-			printf("%s\n",empF.employee_name);
-			printf("%ld\n",empF.phno);
-			printf("%s\n",empF.shift);
-			fclose(fp);
+			sscanf(x,"%d %s %ld %s %d",&(empF.employee_id),empF.employee_name,&(empF.phno),empF.shift,&(empF.area_code));
+			return empF;
+
 		
 }
 
-void ReadCustomerData()
-{
-	FILE *fp;
-	fp=fopen("customer.csv","r");
+customer ReadCustomerData(FILE *f){		
+	customer custF;
 	char x[100];
-			fgets(x,100,fp);
+			fgets(x,100,f);
 			removeCommas(x);
 			printf("\n");
-			sscanf(x,"%d %s %s %f %d %s %s %d",&(custF.customer_id),custF.cust_name,custF.item,&(custF.item_price),&(custF.code),custF.email_ID,custF.address,&(custF.pincode));
-			printf("%d\n", custF.customer_id);
-			printf("%s\n",custF.cust_name);
-			printf("%s\n", custF.item);
-			printf("%f\n", custF.item_price);
-			printf("%d\n",custF.code);
-			printf("%s\n",custF.email_ID);
-			printf("%s\n",custF.address);
-			printf("%d\n", custF.pincode);
-			fclose(fp);
+ 			sscanf(x,"%d %s %s %f %d %s %s %d",&(custF.customer_id),custF.cust_name,custF.item,&(custF.item_price),&(custF.code),custF.email_ID,custF.address,&(custF.pincode));
+			return custF;
+
+		
 }
+void WriteEmployeeData(employee empF){
+	FILE *f;
+	f=fopen("employee.csv","a");
+	if(firste==0){
+	fprintf(f,"%d,%s,%ld,%s,%d",empF.employee_id,empF.employee_name,empF.phno,empF.shift,empF.area_code);
+	firste=1;
+	}
+	else{
+		fprintf(f,"\n%d,%s,%ld,%s,%d",empF.employee_id,empF.employee_name,empF.phno,empF.shift,empF.area_code);
+	}
+	fclose(f);
+	
+	
+}
+void WriteCustData(customer custF){
+	FILE *f;
+	f=fopen("customer.csv","a");
+	if(firstc==0){
+	fprintf(f,"%d,%s,%s,%f,%d,%s,%s,%d",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.pincode);
+	firstc=1;
+	}
+	else{
+		fprintf(f,"\n%d,%s,%s,%f,%d,%s,%s,%d",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.pincode);
+	}
+	fclose(f);
+}
+// void ReadCustomerData(                                                                              )
+// {
+// 	FILE *fp;
+// 	fp=fopen("customer.csv","r");
+// 	char x[100];
+// 			fgets(x,100,fp);
+// 			removeCommas(x);
+// 			printf("\n");
+// 			sscanf(x,"%d %s %s %f %d %s %s %d",&(custF.customer_id),custF.cust_name,custF.item,&(custF.item_price),&(custF.code),custF.email_ID,custF.address,&(custF.pincode));
+// 			printf("%d\n", custF.customer_id);
+// 			printf("%s\n",custF.cust_name);
+// 			printf("%s\n", custF.item);
+// 			printf("%f\n", custF.item_price);
+// 			printf("%d\n",custF.code);
+// 			printf("%s\n",custF.email_ID);
+// 			printf("%s\n",custF.address);
+// 			printf("%d\n", custF.pincode);
+// 			fclose(fp);
+// }
 
 // void PrintEmpData()
 // void WriteEmployeeData()
 // void findData(){
 
 // }
-void add_last(del **head,employee e,customer c){
-	del *ptr=(del*)malloc(sizeof(del));
-	ptr->priority=0;
-	emp=e;
-	cus=c;
-	if(*head==NULL){
-		*head=ptr;
-		ptr->next=NULL;
-	}
-	else{
-		node *crt=*head;
-		while(crt->next!=NULL){
-			crt=crt->next;
+// void add_last(del **head,employee e,customer c){
+// 	del *ptr=(del*)malloc(sizeof(del));
+// 	ptr->priority=0;
+// 	emp=e;
+// 	cus=c;
+// 	if(*head==NULL){
+// 		*head=ptr;
+// 		ptr->next=NULL;
+// 	}
+// 	else{
+// 		node *crt=*head;
+// 		while(crt->next!=NULL){
+// 			crt=crt->next;
 
-		}
-		crt->next=ptr;
-		ptr->next=NULL;
-	}
+// 		}
+// 		crt->next=ptr;
+// 		ptr->next=NULL;
+// 	}
 
-} 
+// } 
 int main(int argc, char const *argv[])
 {
 	//FILE *fp; //a file pointer 
@@ -136,16 +165,38 @@ int main(int argc, char const *argv[])
 // 		// 
 // }
 	
-	//fclose(fp);
-	node *head=NULL;	
+	//fclose(fp);	
 	FILE *fp;
-	fcust=fopen("customer.csv","r");
-	char x[100];
-	while(fgets(x,100,fp)!=NULL){
-		removeCommas(x);
-
-
-	}
+	customer custF;
+	customer cus;
+	employee empF;
+	fp=fopen("employee.csv","r");
+	char y[100];
+	fgets(y,100,fp);
+	empF=ReadEmployeeData(fp);
+	//printf("%d %s %ld %s",empF.employee_id,empF.employee_name,empF.phno,empF.shift);
+	WriteEmployeeData(empF);
+	fgets(y,100,fp);
+	empF=ReadEmployeeData(fp);
+	WriteEmployeeData(empF);
+	// printf("%d\n", custF.customer_id);
+	// printf("%s\n",custF.cust_name);
+	// printf("%s\n", custF.item);
+	// printf("%f\n", custF.item_price);
+	// printf("%d\n",custF.code);
+	// printf("%s\n",custF.email_ID);
+	// printf("%s\n",custF.address);
+	// printf("%d\n", custF.pincode);
+	// cus=ReadCustomerData(fp);
+	// printf("%d\n", cus.customer_id);
+	// printf("%s\n",cus.cust_name);
+	// printf("%s\n", cus.item);
+	// printf("%f\n", cus.item_price);
+	// printf("%d\n",cus.code);
+	// printf("%s\n",cus.email_ID);
+	// printf("%s\n",cus.address);
+	// printf("%d\n", cus.pincode);	
+	fclose(fp);
 
 	
 	return 0;
