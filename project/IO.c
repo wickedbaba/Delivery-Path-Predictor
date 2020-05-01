@@ -68,7 +68,7 @@ customer ReadCustomerData(FILE *f){
 			fgets(x,100,f);
 			removeCommas(x);
 			printf("\n");
- 			sscanf(x,"%d %s %s %f %d %s %s %d",&(custF.customer_id),custF.cust_name,custF.item,&(custF.item_price),&(custF.code),custF.email_ID,custF.address,&(custF.pincode));
+ 			sscanf(x,"%d %s %s %f %d %s %s %d %d",&(custF.customer_id),custF.cust_name,custF.item,&(custF.item_price),&(custF.code),custF.email_ID,custF.address,&(custF.prime),&(custF.pincode));
 			return custF;
 
 		
@@ -95,7 +95,7 @@ void WriteCustData(customer custF){
 	firstc=1;
 	}
 	else{
-		fprintf(f,"\n%d,%s,%s,%f,%d,%s,%s,%d",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.pincode);
+		fprintf(f,"\n%d,%s,%s,%f,%d,%s,%s,%d,%d",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.prime,custF.pincode);
 	}
 	fclose(f);
 }

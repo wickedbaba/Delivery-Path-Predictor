@@ -10,7 +10,7 @@ typedef struct employee
 }employee;
 
 typedef struct customer
-{
+{   
     int customer_id;
     char cust_name[20];
     char item[25];
@@ -19,6 +19,7 @@ typedef struct customer
     //int phno;
     char email_ID[30];
     char address[20];
+    int prime;
     int pincode;
 }customer;
 
