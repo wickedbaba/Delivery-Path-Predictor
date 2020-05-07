@@ -12,20 +12,20 @@ void main()
                 printf("Hello Admin!\nWhat would you like to do ->\n");
                 while(c)
                 {
-                    printf("1->Enter new customer data.\n");
-                    printf("2->Edit existing customer data.\n");
-                    printf("3->Delete existing customer data.\n");
+                    printf("1->Enter new employee data.\n");
+                    printf("2->Edit existing employee data.\n");
+                    printf("3->Delete existing employee data.\n");
                     printf("4->Exit to Main Menu.\n");
                     scanf("%d",&b);
                     switch(b){
                                      case 1:
-                                                    //function for adding new customer's information
+                                                    //function for adding new employee's information
                                                     break;
                                      case 2:
-                                                    //function for retrieving customer's information
+                                                    //function for retrieving employee's information
                                                     break;
                                      case 3:
-                                                    //function for adding new customer's information
+                                                    //function for adding new employee's information
                                                     break;
                                      case 4:
                                                     c=0;
