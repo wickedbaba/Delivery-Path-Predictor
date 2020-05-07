@@ -1,5 +1,3 @@
-// Basically different structures so that we can access the databases namely customer database and employee database
-//edit
 typedef struct employee
 {
     int employee_id;
@@ -15,8 +13,8 @@ typedef struct customer
     char cust_name[20];
     char item[25];
     float item_price;
-    int code; //so this code represents whether the item is fragile or not 0 is fragile and 1 for not fragile if you want we can change it to char
-    //int phno;
+    int code; //code represents whether the item is fragile or not 0 is fragile and 1 for not fragile 
+    long int phno;
     char email_ID[30];
     char address[20];
     int prime;
@@ -36,9 +34,7 @@ typedef struct cust_tree
     struct cust_tree *c1;
 }cmheap;
 
-    
 
-//Basically we could have done with just a single structure but if we are linking a database we need multiple structures to access the databases
 
 customer getcust(int); //to access the database customer and return a particular customer using customer_id
 
