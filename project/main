@@ -1,0 +1,42 @@
+int main()
+{
+    employee* e;
+    printf("Enter Employee Details: ");
+    input_employee(e);
+    printf("Employee Login Request Successful\n");
+    int ch;
+    int f=1;
+    while(f==1)
+    {
+    printf("1: Show All Corresponding Employee's Customers\n");
+    printf("2:Delete a Customer's Detail\n");
+    printf("3:Insert a New Customer\n");
+    printf("4:Terminate\n");
+    printf("Enter Your Choice")
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
+        print_customer(c);
+        break;
+    case 2:
+        insert_customer(c);
+        break;
+    case 3:
+        delete_customer(c);
+        break;
+    case 4:
+        f=0;
+        break;
+    default:
+        printf("Invalid Input\n");
+        break;
+        printf("Enter 1 to continue and 4 to terminate\n");
+        scanf("%d",&f);
+    }
+    }
+}
+
+
+    }
+}
