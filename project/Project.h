@@ -34,27 +34,12 @@ typedef struct cust_tree
     struct cust_tree *c1;
 }cmheap;
 
-
-
 customer getcust(int); //to access the database customer and return a particular customer using customer_id
 
 employee getemployee(customer); //so this function will return the employee assigned taking the customer address basically we'll make the list for each and every employee of the organization and the employee assigned will depend on the customer
 
-
-//These are functions for the databases created mns inserting data and deleting data in them they will be an option in case ma'am wants to enter some details into our dtabses
-void insert_employee();
-void insert_customer();
-void delete_employee();
-void delete_customer();
-
-// Small functions in case we need it
 void swap_data();
 int Isempty();
-
-// So basically we have 10 major functions in the program so we have to work accordingly these function we'll divide and then compile inside main
-// Also think about how our main function should look All the printf should be used carefully because the output should look good
-
-
 
 //input output csv
 void removeSpaces(char line[]);
@@ -63,14 +48,18 @@ employee ReadEmployeeData(FILE *f);
 customer ReadCustomerData(FILE *f);
 void WriteEmployeeData(employee empF);
 void WriteCustData(customer custF);
+
+//Assign priority
 void assign_priority();
 
-//input of customer
+//input/output of customer
 void input(customer* c);
-
 customer* create();
 int parent(int i);
 int left(int i);
 int right(int i);
 void maxheapify(int arr[], int n, int i);
 void get_cust_data();
+
+//input/output of employees
+void input_employee(employee* e1);
