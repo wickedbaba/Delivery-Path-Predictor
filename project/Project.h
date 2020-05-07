@@ -59,13 +59,24 @@ void insert_customer();
 void delete_employee();
 void delete_customer();
 
-// Small functions in case we need it
 void swap_data();
 int Isempty();
 
-// So basically we have 10 major functions in the program so we have to work accordingly these function we'll divide and then compile inside main
-// Also think about how our main function should look All the printf should be used carefully because the output should look good
-
-
-
 //input output csv
+void removeSpaces(char line[]);
+void removeCommas(char line[]);
+employee ReadEmployeeData(FILE *f);
+customer ReadCustomerData(FILE *f);
+void WriteEmployeeData(employee empF);
+void WriteCustData(customer custF);
+void assign_priority();
+
+//input of customer
+void input(customer* c);
+
+customer* create();
+int parent(int i);
+int left(int i);
+int right(int i);
+void maxheapify(int arr[], int n, int i);
+void get_cust_data();
