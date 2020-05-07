@@ -3,6 +3,7 @@ void assign_priority()
     int priority=0;
     if(prime==1)
     {
+        ++priority;
         if(price>8000)
             priority++;
         if(code==1)
