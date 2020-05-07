@@ -42,7 +42,7 @@ void main()
     printf("Enter Employee Details: ");
     input_employee(e);
     printf("Employee Login Request Successful\n");
-    printf("Correspondind Employee's Customer Details:\n");
+    printf("Corresponding Employee's Customer Details:\n");
     print_customer();
     }
    }
