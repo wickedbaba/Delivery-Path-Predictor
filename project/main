@@ -1,6 +1,44 @@
-int main()
+void main()
 {
-    employee* e;
+    int a,b,c=1;
+   printf("\t\tWelcome\n\n");
+
+   while(1){
+    printf("\t\tLogin As-\n");
+    printf("\t1->Admin\t2->Employee");
+    printf("\t3->Exit\n");
+   scanf("%d",&a);
+           if(a==1){
+                printf("Hello Admin!\nWhat would you like to do ->\n");
+                while(c)
+                {
+                    printf("1->Enter new customer data.\n");
+                    printf("2->Edit existing customer data.\n");
+                    printf("3->Delete existing customer data.\n");
+                    printf("4->Exit to Main Menu.\n");
+                    scanf("%d",&b);
+                    switch(b){
+                                     case 1:
+                                                    //function for adding new customer's information
+                                                    break;
+                                     case 2:
+                                                    //function for retrieving customer's information
+                                                    break;
+                                     case 3:
+                                                    //function for adding new customer's information
+                                                    break;
+                                     case 4:
+                                                    c=0;
+                                                    break;
+
+                                     default :
+                                     printf("Enter correct value\n");
+                                        }
+           }
+                }
+
+   else if(a==2){
+     employee* e;
     printf("Enter Employee Details: ");
     input_employee(e);
     printf("Employee Login Request Successful\n");
@@ -39,4 +77,10 @@ int main()
 
 
     }
+   }
+   else
+    exit(0);
+   }
+
+
 }
