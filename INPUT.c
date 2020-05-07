@@ -25,13 +25,13 @@ printf("Pincode : ");
 scanf("&d",&c1.pincode);
 
 //Employee Input
-
+void input_employee(employee* e1)
 printf("Enter employee ID : ");
 scanf("%d",&e1.employee_id);
 printf("Enter employee name : ");
 scanf("%s",&employee_name);
 printf("Enter phone number : ");
-scanf("%ll",&e1.phno);
+scanf("%ld",&e1.phno);
 printf("Enter shift : ");
 scanf("%s",&e1.shift);
 printf("Enter area code : ");
