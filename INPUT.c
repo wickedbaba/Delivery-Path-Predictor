@@ -1,3 +1,7 @@
+FILE *fp;
+customer c1;
+employee e1;
+
 //Customer input
 
 printf("Welcome\n");
