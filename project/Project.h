@@ -1,5 +1,4 @@
-// Basically different structures so that we can access the databases namely customer database and employee database
-//edit
+
 typedef struct employee
 {
     int employee_id;
@@ -15,7 +14,7 @@ typedef struct customer
     char cust_name[20];
     char item[25];
     float item_price;
-    int code; //so this code represents whether the item is fragile or not 0 is fragile and 1 for not fragile if you want we can change it to char
+    int code; //code represents whether the item is fragile or not 0 is fragile and 1 for not fragile
     //int phno;
     char email_ID[30];
     char address[20];
@@ -44,7 +43,7 @@ customer getcust(int); //to access the database customer and return a particular
 
 employee getemployee(customer); //so this function will return the employee assigned taking the customer address basically we'll make the list for each and every employee of the organization and the employee assigned will depend on the customer
 
-//Queue functions so these functions for a particular employee will make the list of customers for that day we get one prob here that database has to be updated daily
+
 void createpqueue();
 void push();//insertion in the queue
 del *pop();
