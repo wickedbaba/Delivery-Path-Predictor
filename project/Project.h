@@ -23,13 +23,20 @@ typedef struct customer
     int pincode;
 }customer;
 
-typedef struct delivery
+typedef struct emp_tree
+{   
+    employee e1;
+    struct emp_tree *e1;
+}emheap;
+
+typedef struct cust_tree
 {
-    employee emp;//so this is to have all the employee fields inside
-    customer cust;//""""" customer"""
-    int priority;
-    struct delivery *next;
-}del;
+    empheap e;
+    customer c1;
+    struct cust_tree *c1;
+}cmheap;
+
+    
 
 //Basically we could have done with just a single structure but if we are linking a database we need multiple structures to access the databases
 
