@@ -27,7 +27,7 @@ typedef struct emp_tree
 {   
     employee e1;
     struct emp_tree *e1;
-}emheap;
+}empheap;
 
 typedef struct cust_tree
 {
