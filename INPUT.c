@@ -37,3 +37,18 @@ scanf("%s",&e1.shift);
 printf("Enter area code : ");
 scanf("%d",&e1.area_code);
 
+
+//output for delivery priority
+
+//a for loop so that details of all customers are printed in the same format
+{
+printf("---------------------\n");
+printf("1. Customer's Name-%s\n",c1.cust_name);
+
+printf("2. Customer's Address-%s\n ");
+//customer ka address kaise input karna hai 
+printf("3. Pincode :%d ",c1.pincode);
+
+if(c1.code==0)
+printf("4. Item is  Fragile \n");
+}
