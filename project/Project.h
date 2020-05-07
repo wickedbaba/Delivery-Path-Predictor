@@ -52,7 +52,7 @@ void assign_priority();// Yet to be decided decide asap
 void display_list(employee);
 // So these functions will be in an loop which will be traversing through the employee database and we will have to make different queues for different employees
 
-//These are functions for the databases created mns inserting data and deleting data in them they will be an option in case ma'am wants to enter some details into our dtabses
+//These are functions for the  databases created mns inserting data and deleting data in them they will be an option in case ma'am wants to enter some details into our dtabses
 void insert_employee();
 void insert_customer();
 void delete_employee();
