@@ -26,6 +26,7 @@ scanf("&d",&c1.pincode);
 
 //Employee Input
 void input_employee(employee* e1)
+{
 printf("Enter employee ID : ");
 scanf("%d",&e1.employee_id);
 printf("Enter employee name : ");
@@ -36,7 +37,7 @@ printf("Enter shift : ");
 scanf("%s",&e1.shift);
 printf("Enter area code : ");
 scanf("%d",&e1.area_code);
-
+}
 
 //output for delivery priority
 
