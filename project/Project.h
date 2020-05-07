@@ -34,10 +34,6 @@ typedef struct cust_tree
     struct cust_tree *c1;
 }cmheap;
 
-customer getcust(int); //to access the database customer and return a particular customer using customer_id
-
-employee getemployee(customer); //so this function will return the employee assigned taking the customer address basically we'll make the list for each and every employee of the organization and the employee assigned will depend on the customer
-
 void swap_data();
 int Isempty();
 
@@ -60,6 +56,8 @@ int left(int i);
 int right(int i);
 void maxheapify(int arr[], int n, int i);
 void get_cust_data();
+customer getcust(int); //to access the database customer and return a particular customer using customer_id
 
 //input/output of employees
 void input_employee(employee* e1);
+employee getemployee(customer); //return the employee assigned taking the customer address
