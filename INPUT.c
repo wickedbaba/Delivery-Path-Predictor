@@ -18,7 +18,7 @@ scanf("%d",&c1.code);
 printf("Enter email id : ");
 scanf("%s",&c1.email_ID);
 printf("Enter address : ");
-fgets(c1.address, 20, stdin);
+scanf("%s",&c1.address);
 printf("Is the customer having prime membership? : ");
 scanf("%d",&c1.prime);
 printf("Pincode : ");
