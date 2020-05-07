@@ -33,9 +33,9 @@ void main()
 
                                      default :
                                      printf("Enter correct value\n");
-                                        }
+                            }
            }
-                }
+}
 
    else if(a==2){
      employee* e;
