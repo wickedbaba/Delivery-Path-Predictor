@@ -1,6 +1,6 @@
 
 printf("\n\nEnter the Customer ID: ");
-scanf("%d",&c1.cust_ID);
+scanf("%d",&c1.customer_id);
 printf("Enter Customer Name: ");
 scanf("%s",c1.cust_name);
 printf("Enter the item name: ");
