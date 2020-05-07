@@ -17,7 +17,7 @@ printf("Enter the address of the customer: ");
 scanf("%s",&c->address);
 printf("Enter the pincode of the customer: ");
 scanf("%d",&c->pincode);
-printf("Enter the whether the customer has prime membership or not(1 if he has and 0 if he doesn't):")
+printf("Enter the whether the customer has prime membership or not(1 if he has and 0 if he doesn't): ")
 scanf("%d",&c->prime);
 }
 
