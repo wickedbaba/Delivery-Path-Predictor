@@ -40,13 +40,6 @@ customer getcust(int); //to access the database customer and return a particular
 
 employee getemployee(customer); //so this function will return the employee assigned taking the customer address basically we'll make the list for each and every employee of the organization and the employee assigned will depend on the customer
 
-//Queue functions so these functions for a particular employee will make the list of customers for that day we get one prob here that database has to be updated daily
-void createpqueue();
-void push();//insertion in the queue
-del *pop();
-void assign_priority();// Yet to be decided decide asap
-void display_list(employee);
-// So these functions will be in an loop which will be traversing through the employee database and we will have to make different queues for different employees
 
 //These are functions for the databases created mns inserting data and deleting data in them they will be an option in case ma'am wants to enter some details into our dtabses
 void insert_employee();
