@@ -50,6 +50,7 @@ void push();//insertion in the queue
 del *pop();
 void assign_priority();// Yet to be decided decide asap
 void display_list(employee);
+void print_customer(customer);
 // So these functions will be in an loop which will be traversing through the employee database and we will have to make different queues for different employees
 
 //These are functions for the  databases created mns inserting data and deleting data in them they will be an option in case ma'am wants to enter some details into our dtabses
