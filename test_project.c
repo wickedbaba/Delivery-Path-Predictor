@@ -23,7 +23,7 @@ void main()
                 printf("2.Edit existing employee data.\n");
                 printf("3.Delete existing employee data.\n");
                 printf("4.Exit to Main Menu.\n");
-                printf("\nEnter your choice: ")
+                printf("\nEnter your choice: ");
                 scanf("%d",&b);
                 switch(b)
                 {
@@ -48,7 +48,8 @@ void main()
             printf("Corresponding Employee's Customer Details:\n");
             print_customer();
         }
-    }
-    else
+      else
         exit(0);
+    }
+   
 }
