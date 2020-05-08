@@ -22,28 +22,29 @@ typedef struct customer
 }customer;
 
 typedef struct emp_tree
-{   
-    employee e1;
-    struct emp_tree *e1;
+{   //error
+    // employee e1;
+    //error
+    // struct emp_tree *e1;
 }empheap;
 
 typedef struct cust_tree
 {
     empheap e;
     customer c1;
-    struct cust_tree *c1;
+    //error
+    // struct cust_tree *c1;  
 }cmheap;
 
 void swap_data();
 int Isempty();
 
 //input output csv
-void removeSpaces(char line[]);
-void removeCommas(char line[]);
-employee ReadEmployeeData(FILE *f);
-customer ReadCustomerData(FILE *f);
+void ReadEmployeeData(employee empF[],int *length);
+void ReadCustomerData(customer custF[],int *length);
 void WriteEmployeeData(employee empF);
 void WriteCustData(customer custF);
+
 
 //Assign priority
 void assign_priority();
