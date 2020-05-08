@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include<conio.h>
 #include "Project.h"
 
 void main()
@@ -11,11 +10,11 @@ void main()
     {
         printf("\nLogin As:\n");
         printf("\n1.Admin\n2.Employee\n3.Exit");
-        printf("Enter your choice: ");
+        printf("\nEnter your choice: ");
         scanf("%d",&a);
         if(a==1)
         {
-            clrscr();
+             system("cls");
             printf("Hello Admin!\nWhat would you like to do ->\n");
             while(c)
             {
@@ -41,7 +40,7 @@ void main()
         }
         else if(a==2)
         {
-            clrscr();
+             system("cls");
             employee* e;
             printf("Enter Employee Details: ");
             input_employee(e);
