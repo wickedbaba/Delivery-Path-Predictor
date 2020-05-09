@@ -1,0 +1,27 @@
+Priority Delivery Management System
+
+IDEA
+The aim of this project is to make a system that would assign the customers to each employee according to their priority. This project can be expanded by including more parameters for judging the priority of the customers and thus increasing the quality of service provided by the supplier.
+
+Working
+The data of the employees and the customer is stored in csv file. The data of the employees is accessed by the administrator. The data of the employee is stored in an array of linked list and the data of the customers are stored in form of heap tree. Every employee will be assigned a list of customers with top priority.
+
+The program is menu driven so the user will have to input the choice and according to the choice selected he/she will have the following choices:
+•	Access customer database
+•	Access employee database
+•	Displaying a list of customers for a specific employee
+
+Data Structure Used:
+•	Heap Tree for making priority queue
+•	Array of linked list for employees
+•	Structure for customer and employee
+
+Contribution:
+Ridham Bhagat: ReadEmployeeData(),ReadCustomerData(),WriteEmployeeData(),WriteCustData(), getemployee()
+Arinjay Srivastava: assign_priority(), create(), project.h
+Aryaman Rana: Readme, get_cust_data(), employee structure
+Shivang Madhwal: Pdf, getcust(), customer structure,
+Prabhat Singh Gaur: maxheapify(), input_employee(),
+
+
+
