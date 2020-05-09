@@ -2,8 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include "Project.h"
-int firste=0;
-int firstc=0;
 void removeSpaces(char line[]){
 	
 int i=0;
@@ -88,31 +86,4 @@ void ReadCustomerData(customer custF[],int *length){
 	(*length)-=1;
 	
 	fclose(fp);
-}
-void WriteEmployeeData(employee empF){
-	FILE *f;
-	printf("%d\n",firste);
-	f=fopen("employee.csv","a");
-	if(firste==0){
-	fprintf(f,"%d,%s,%ld,%s,%d",empF.employee_id,empF.employee_name,empF.phno,empF.shift,empF.area_code);
-	firste=1;
-	}
-	else{
-		fprintf(f,"\n%d,%s,%ld,%s,%d",empF.employee_id,empF.employee_name,empF.phno,empF.shift,empF.area_code);
-	}
-	fclose(f);
-	
-	
-}
-void WriteCustData(customer custF){
-	FILE *f;
-	f=fopen("customer.csv","a");
-	if(firstc==0){
-	fprintf(f,"%d,%s,%s,%f,%d,%s,%s,%d",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.pincode);
-	firstc=1;
-	}
-	else{
-		fprintf(f,"\n%d,%s,%s,%f,%d,%s,%s,%d,%d",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.prime,custF.pincode);
-	}
-	fclose(f);
 }

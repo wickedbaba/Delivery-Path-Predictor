@@ -14,8 +14,8 @@ int main(int argc, char const *argv[])
 	}
 	employee e[100];
 	ReadEmployeeData(e,&len);
-	WriteEmployeeData(e[2]);
-	WriteEmployeeData(e[3]);
-	
+	employee temp=e[2];
+	WriteEmployeeData(temp);
+
 	return 0;
 }
