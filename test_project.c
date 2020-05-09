@@ -13,7 +13,7 @@ void main()
     {
         printf("\nLogin As:\n");
         printf("\n1.Admin\n2.Employee\n3.Exit");
-        printf("Enter your choice: ");
+        printf("\nEnter your choice: ");
         scanf("%d",&a);
         if(a==1)
         {
@@ -28,6 +28,7 @@ void main()
                 printf("5.Return to main menu\n");
                 printf("\nEnter your choice: ");
                 scanf("%d",&b);
+                printf("\n");
                 switch(b)
                 {
                     case 1: printf("Enter the number of employees whise data is to be entered: ");
@@ -48,7 +49,7 @@ void main()
                             for(i=0;i<n;i++)
                                 get_cust_data(c1[i]);
                             break;
-                    case 4: printf("Enter the customer Id of the employee: ");
+                    case 4: printf("Enter the customer Id: ");
                             scanf("%d",&id);
                             for(i=0;i<100;i++)
                             {
