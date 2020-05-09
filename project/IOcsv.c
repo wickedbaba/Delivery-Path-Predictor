@@ -38,6 +38,37 @@ int j=0;
 	line[l]='\0';
 
 }
+int isEmpty(const char *str)
+{
+    char ch;
+
+    do
+    {
+        ch = *(str++);
+        if(ch != ' ' && ch != '\t' && ch != '\n' && ch != '\r' && ch != '\0')
+            return 0;
+    } while (ch != '\0');
+    return 1;
+}
+void removeEmptyLines(char name[])
+{	FILE *srcFile;
+    FILE *tempFile;
+    srcFile  = fopen(name, "r");
+    tempFile = fopen("remove-blanks.csv", "w");
+    rewind(srcFile);
+    char buffer[1000];
+
+    while ((fgets(buffer, 1000, srcFile)) != NULL)
+    {
+        if(!isEmpty(buffer))
+            fputs(buffer, tempFile);
+    }
+    fclose(srcFile);
+    fclose(tempFile);
+    remove("employee.csv");
+    rename("remove-blanks.csv", name);
+    
+}
 void removeCommas(char line[]){
 	removeSpaces(line);
 	int i=0;
@@ -86,4 +117,27 @@ void ReadCustomerData(customer custF[],int *length){
 	(*length)-=1;
 	
 	fclose(fp);
+}
+
+void WriteEmployeeData(employee empF){
+	FILE *f;;
+	f=fopen("employee.csv","a");
+		rewind(f);
+		fseek(f, 0, SEEK_END);
+		fprintf(f,"\n%d,%s,%ld,%s,%d\r\n",empF.employee_id,empF.employee_name,empF.phno,empF.shift,empF.area_code);
+	fclose(f);
+	removeEmptyLines("employee.csv");
+	
+	
+}
+void WriteCustData(customer custF)
+{
+	FILE *f;
+	
+	f=fopen("customer.csv","a");	
+	rewind(f);
+	fseek(f, 0, SEEK_END);
+	fprintf(f,"\n%d,%s,%s,%f,%d,%s,%s,%d\n",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.pincode);
+	fclose(f);
+	removeEmptyLines("employee.csv");
 }
