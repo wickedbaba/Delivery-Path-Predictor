@@ -45,7 +45,6 @@ void ReadCustomerData(customer custF[],int *length);
 void WriteEmployeeData(employee empF);
 void WriteCustData(customer custF);
 
-
 //Assign priority
 void assign_priority();
 
