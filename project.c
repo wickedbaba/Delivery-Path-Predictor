@@ -57,7 +57,7 @@ void ReadEmployeeData(employee empF[],int (*length)){
 	(*length)=0;
 	fp=fopen("employee.csv","r");
 	char x[100];
-	int first=0;-
+	int first=0;
 	while(fgets(x,100,fp)!=NULL){
 		if(first==0){
 			first=1;
@@ -122,23 +122,23 @@ void WriteCustData(customer custF){
 void get_cust_data(customer c)
 {
     printf("\n\nEnter the Customer ID: ");
-    scanf("%d",&c->customer_id);
+    scanf("%d",&c.customer_id);
     printf("Enter Customer Name: ");
-    scanf("%s",c->cust_name);
+    scanf("%s",c.cust_name);
     printf("Enter the item name: ");
-    scanf("%s",c->item);
+    scanf("%s",c.item);
     printf("Enter the item price: ");
-    scanf("%f",&c->item_price);
+    scanf("%f",&c.item_price);
     printf("Enter whether item is fragile or not(0 for not 1 for yes): ");
-    scanf("%d",&c->code);
+    scanf("%d",&c.code);
     printf("Enter the Email ID of the customer: ");
-    scanf("%s",c->email_ID);
+    scanf("%s",c.email_ID);
     printf("Enter the address of the customer: ");
-    scanf("%s",&c->address);
+    scanf("%s",c.address);
     printf("Enter the pincode of the customer: ");
-    scanf("%d",&c->pincode);
+    scanf("%d",&c.pincode);
     printf("Enter the whether the customer has prime membership or not(1 if he has and 0 if he doesn't): ");
-    scanf("%d",&c->prime);
+    scanf("%d",&c.prime);
     assign_priority(c);
     WriteCustData(c);
 }
@@ -160,19 +160,19 @@ void print_customer(customer* c)
     printf("The customer has prime membership or not(1 if he has and 0 if he doesn't): %d",c->prime);
 }
 
-void input_employee(employee* e1)
+void input_employee(employee e1)
 {
     printf("Enter employee ID : ");
     scanf("%d",&e1.employee_id);
     printf("Enter employee name : ");
-    scanf("%s",&employee_name);
+    scanf("%s",&e1.employee_name);
     printf("Enter phone number : ");
     scanf("%ld",&e1.phno);
     printf("Enter shift : ");
     scanf("%s",&e1.shift);
     printf("Enter area code : ");
     scanf("%d",&e1.area_code);
-    WriteEmployeeData(employee e1);
+    WriteEmployeeData(e1);
 }
 
 void print_employee(employee e1)
@@ -185,29 +185,31 @@ void print_employee(employee e1)
     printf("Enter area code : %d",e1.area_code);
 }
 
-void assign_priority(employee emp)
+void assign_priority(customer c)
 {
-    int emp.priority=0;
-    if(emp.prime==1)
+    c.priority=0;
+    if(c.prime==1)
     {
-        ++emp.priority;
-        if(emp.price>8000)
-            emp.priority++;
-        if(code==1)
-            emp.priority=priority+2;
+        ++c.priority;
+        if(c.item_price>8000)
+            c.priority++;
+        if(c.code==1)
+            c.priority=c.priority+2;
     }
     else
     {
-        if(price>12000)
-            emp.priority++;
-        if(code==1)
-            emp.priority=priority+2;
+        if(c.item_price>12000)
+            c.priority++;
+        if(c.code==1)
+            c.priority=c.priority+2;
     }
 }
 
-void asscustemp(employee emp,customer c,int emp_size,int cust_size)
+void asscustemp(employee emp[],customer c[],int emp_size,int cust_size)
 {
-    int i,j,n[0];
+    int i,j,n[cust_size];
+    for(j=0;j<cust_size;j++)
+        n[j]=0;
     for(i=0;i<emp_size;i++)
     {
         for(j=0;j<cust_size;j++)
@@ -215,15 +217,15 @@ void asscustemp(employee emp,customer c,int emp_size,int cust_size)
             if(emp[i].area_code=c[i].pincode)
             {
                emp[i].c[i]=c[i];
-               n++;
+               n[i]++;
             }
         }
         buildmaxheap(emp[i].c[i],n[i]);
-        print_heap()
+        print_customer(emp[i].c[i]);
     }
 }
 
-void buildmaxheap(employee arr[],int n)
+void buildmaxheap(customer arr[],int n)
 {
     int i;
     for(i=(n-1)/2;i>=0;i--)

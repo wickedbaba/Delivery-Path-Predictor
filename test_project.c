@@ -13,7 +13,7 @@ void main()
     {
         printf("\nLogin As:\n");
         printf("\n1.Admin\n2.Employee\n3.Exit");
-        printf("Enter your choice: ");
+        printf("\nEnter your choice: ");
         scanf("%d",&a);
         if(a==1)
         {
@@ -25,9 +25,10 @@ void main()
                 printf("2.Print existing employee data.\n");
                 printf("3.Enter new customer data\n");
                 printf("4.Print existing customer data\n");
-                printf("5.Return to main menu\n")
-                printf("\nEnter your choice: ")
+                printf("5.Return to main menu\n");
+                printf("\nEnter your choice: ");
                 scanf("%d",&b);
+                printf("\n");
                 switch(b)
                 {
                     case 1: printf("Enter the number of employees whise data is to be entered: ");
@@ -48,7 +49,7 @@ void main()
                             for(i=0;i<n;i++)
                                 get_cust_data(c1[i]);
                             break;
-                    case 4: printf("Enter the customer Id of the employee: ");
+                    case 4: printf("Enter the customer Id: ");
                             scanf("%d",&id);
                             for(i=0;i<100;i++)
                             {
@@ -61,19 +62,19 @@ void main()
                     default :printf("Enter correct value: ");
                 }
             }
-            else if(a==2)
+        }
+        else if(a==2)
+        {
+            system("cls");
+            printf("Enter your employee ID: ");
+            scanf("%d",&id);
+            for(i=0;i<1000;i++)
             {
-                system("cls");
-                asscustemp(e1[],1000,c1[],100);
-                printf("Enter your employee ID: ");
-                scanf("%d",&id);
-                for(i=0;i<1000;i++)
-                {
-                    if(e1[i].employee_id==id)
-                        asscustemp(e1[i],c1[i],1000,100);
-                }
+                if(e1[i].employee_id==id)
+                    asscustemp(e1,c1,1000,100);
             }
         }
         else
             exit(0);
+    }
 }
