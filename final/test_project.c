@@ -73,6 +73,7 @@ void main()
                                 printf("%d,%s,%s,%f,%d,%s,%s,%d\n",c1[i].customer_id,c1[i].cust_name,c1[i].item,c1[i].item_price,c1[i].code,c1[i].email_ID,c1[i].address,c1[i].pincode);
 
                             }
+                            break;
                     case 7: c=0;
                             break;
 
