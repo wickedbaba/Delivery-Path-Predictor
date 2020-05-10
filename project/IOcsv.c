@@ -127,8 +127,6 @@ void WriteEmployeeData(employee empF){
 		fprintf(f,"\n%d,%s,%ld,%s,%d\r\n",empF.employee_id,empF.employee_name,empF.phno,empF.shift,empF.area_code);
 	fclose(f);
 	removeEmptyLines("employee.csv");
-	
-	
 }
 void WriteCustData(customer custF)
 {
@@ -139,5 +137,5 @@ void WriteCustData(customer custF)
 	fseek(f, 0, SEEK_END);
 	fprintf(f,"\n%d,%s,%s,%f,%d,%s,%s,%d\n",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.pincode);
 	fclose(f);
-	removeEmptyLines("employee.csv");
+	removeEmptyLines("customer.csv");
 }
