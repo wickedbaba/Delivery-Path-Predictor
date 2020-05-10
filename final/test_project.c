@@ -39,6 +39,7 @@ void main()
                             scanf("%d",&we);
                             for(i=n;i<(n+we);i++)
                                 input_employee(e1[i]);
+                            ReadEmployeeData(e1,&n);
                             n=n+we;
                             break;
                     case 2: printf("Enter the employee Id of the employee: ");
@@ -54,6 +55,7 @@ void main()
                             for(i=n1;i<(n1+wc);i++)
                                 get_cust_data(c1[i]);
                             n1=n1+wc;
+                            ReadCustomerData(c1,&n1);
                             break;
                     case 4: printf("Enter the customer Id: ");
                             scanf("%d",&id);
