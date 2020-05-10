@@ -246,13 +246,13 @@ void asscustemp(employee emp[],customer c[],int emp_size,int cust_size)
                n[j]++;
             }
         }
-        buildmaxheap(emp[i].c[],n[i]);
+        buildmaxheap(emp[i].c,n[i]);
     }
     for(i=0;i<emp_size;i++)
     {
         for(j=0;j<cust_size;j++)
         {
-           print_customer(emp[i].c[]);
+           print_customer(emp[i].c);
 	}
     }
 }
