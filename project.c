@@ -242,13 +242,18 @@ void asscustemp(employee emp[],customer c[],int emp_size,int cust_size)
         {
             if(emp[i].area_code=c[i].pincode)
             {
-               emp[i].c[i]=c[i];
-               n[i]++;
+               emp[i].c[j]=c[j];
+               n[j]++;
             }
         }
-        buildmaxheap(emp[i].c[i],n[i]);
-        print_customer(emp[i].c[i]);
+        buildmaxheap(emp[i].c[],n[i]);
     }
+    for(i=0;i<emp_size;i++)
+    {
+        for(j=0;j<cust_size;j++)
+        {
+		print_customer(emp[i].c[j]);
+	}
 }
 
 void buildmaxheap(customer arr[],int n)
