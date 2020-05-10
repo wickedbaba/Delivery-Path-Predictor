@@ -191,11 +191,11 @@ void input_employee(employee e1)
     printf("Enter employee ID : ");
     scanf("%d",&e1.employee_id);
     printf("Enter employee name : ");
-    scanf("%s",&e1.employee_name);
+    scanf("%s",e1.employee_name);
     printf("Enter phone number : ");
     scanf("%ld",&e1.phno);
     printf("Enter shift : ");
-    scanf("%s",&e1.shift);
+    scanf("%s",e1.shift);
     printf("Enter area code : ");
     scanf("%d",&e1.area_code);
     WriteEmployeeData(e1);
@@ -205,7 +205,7 @@ void print_employee(employee e1)
 {
     printf("Employee name : ");
     puts(e1.employee_name);
-    printf("Phone number : %d",e1.phno);
+    printf("Phone number : %ld",e1.phno);
     printf("Shift : ");
     puts(e1.shift);
     printf("Enter area code : %d",e1.area_code);
