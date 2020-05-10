@@ -5,7 +5,6 @@ typedef struct customer
     char item[25];
     float item_price;
     int code;
-    long int phno;
     char email_ID[30];
     char address[20];
     int prime;
