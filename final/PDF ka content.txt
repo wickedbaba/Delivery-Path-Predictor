@@ -19,7 +19,7 @@ Data Structure Used:
 Contribution:
 Ridham Bhagat: ReadEmployeeData(),ReadCustomerData(),WriteEmployeeData(),WriteCustData(), getemployee()
 Arinjay Srivastava: assign_priority(), create(), project.h
-Aryaman Rana: Readme, get_cust_data(), employee structure
+Aryaman Rana: Readme(using Markdown), get_cust_data(), employee structure
 Shivang Madhwal: Pdf, getcust(), customer structure,
 Prabhat Singh Gaur: maxheapify(), input_employee(),
 
