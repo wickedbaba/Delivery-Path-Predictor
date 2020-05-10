@@ -37,6 +37,7 @@ int left(int);
 int right(int);
 void maxheapify(customer *,int,int);
 void get_cust_data(customer);
+void print_customer(customer);
 void input_employee(employee);
 void print_employee(employee);
 void asscustemp(employee *,customer *,int,int);

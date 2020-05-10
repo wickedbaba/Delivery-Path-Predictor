@@ -6,7 +6,7 @@
 void main()
 {
     int a,b,c=1,i,n,id;
-    employee e1[1000];
+    employee e1[100];
     customer c1[100];
     while(1)
     {

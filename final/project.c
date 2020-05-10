@@ -169,21 +169,21 @@ void get_cust_data(customer c)
     WriteCustData(c);
 }
 
-void print_customer(customer* c)
+void print_customer(customer c)
 {
-    printf("\n\nEnter the Customer ID: %d",c->customer_id);
+    printf("\n\nEnter the Customer ID: %d",c.customer_id);
     printf("The Customer Name: ");
-    puts(c->cust_name);
+    puts(c.cust_name);
     printf("\nThe item name: ");
-    puts(c->item);
-    printf("\nThe item price: %f",c->item_price);
-    printf(" item is fragile or not(0 for not 1 for yes): %d",c->code);
+    puts(c.item);
+    printf("\nThe item price: %f",c.item_price);
+    printf(" item is fragile or not(0 for not 1 for yes): %d",c.code);
     printf("The Email ID of the customer: ");
-    puts(c->email_ID);
+    puts(c.email_ID);
     printf("The address of the customer: ");
-    puts(c->address);
-    printf("The pin code of the customer: %d",c->pincode);
-    printf("The customer has prime membership or not(1 if he has and 0 if he doesn't): %d",c->prime);
+    puts(c.address);
+    printf("The pin code of the customer: %d",c.pincode);
+    printf("The customer has prime membership or not(1 if he has and 0 if he doesn't): %d",c.prime);
 }
 
 void input_employee(employee e1)
@@ -252,7 +252,7 @@ void asscustemp(employee emp[],customer c[],int emp_size,int cust_size)
     {
         for(j=0;j<cust_size;j++)
         {
-           print_customer(emp[i].c);
+           print_customer(emp[i].c[j]);
 	}
     }
 }
@@ -288,11 +288,11 @@ void maxheapify(customer arr[], int n, int i)
         largest=l;
     else
         largest=i;
-    if(r<n&&arr[r.priority]>arr[largest].priority)
+    if(r<n&&arr[r].priority>arr[largest].priority)
         largest=r;
     if(largest!=i)
     {
-        temp=arr[i];
+        temp=arr[i].priority;
         arr[i].priority=arr[largest].priority;
         arr[largest].priority=temp;
         maxheapify(arr,n,largest);
