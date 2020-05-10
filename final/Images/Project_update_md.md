@@ -45,6 +45,7 @@ He is allowed the access of-
 like-  Name, Phone Number , Address, If the item is fragile.
 
 - Enter the Id of Employee
+
 ![](https://raw.githubusercontent.com/shivang-madhwal/DS_Project_2020/master/final/Images/img3.png)
 
 - The List of customers and their details appear
