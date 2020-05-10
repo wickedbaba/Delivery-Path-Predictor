@@ -9,6 +9,8 @@ void main()
     int wc,we;
     employee e1[100];
     customer c1[100];
+    ReadEmployeeData(e1,&n);
+    ReadCustomerData(c1,&n1);
     while(1)
     {
         printf("\nLogin As:\n");
@@ -31,8 +33,6 @@ void main()
                 printf("\nEnter your choice: ");
                 scanf("%d",&b);
                 printf("\n");
-                ReadEmployeeData(e1,&n);
-                ReadCustomerData(c1,&n1);
                 switch(b)
                 {
                     case 1: printf("Enter the number of employees whose data is to be entered: ");
