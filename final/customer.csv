@@ -1,5 +1,5 @@
-Cust_ID,Customer_Name,Item,Item_Price,fragile_code,Email,Address,Area_Code
-11111,Arinjay Srivastava,Laptop,50000,1,as4564@gmail.com,Noida,201301
-11112,Prabhat Singh Gaur,Earphones,300,0,ps2132@yahoomail.com,Kanpur,208001
-11114,Shivang Madhwal,Smartphone,30000,1,sm2312@gmail.com,Noida ,201301
-11115,Ridham Bhagat,Shampoo,600,0,rb3311@gmail.com,Faridabad,101213
+Cust_ID,Customer_Name,Item,Item_Price,fragile_code,Email,Address,Prime,Area_Code
+11111,Arinjay Srivastava,Laptop,50000,1,as4564@gmail.com,Noida,0,201301
+11112,Prabhat Singh Gaur,Earphones,300,0,ps2132@yahoomail.com,Kanpur,1,208001
+11114,Shivang Madhwal,Smartphone,30000,1,sm2312@gmail.com,Noida,0,201301
+11115,Ridham Bhagat,Shampoo,600,0,rb3311@gmail.com,Faridabad,1,101213

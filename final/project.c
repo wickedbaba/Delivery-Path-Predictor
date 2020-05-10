@@ -139,7 +139,7 @@ void WriteCustData(customer custF)
     f=fopen("customer.csv","a");    
     rewind(f);
     fseek(f, 0, SEEK_END);
-    fprintf(f,"\n%d,%s,%s,%f,%d,%s,%s,%d\n",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.pincode);
+    fprintf(f,"\n%d,%s,%s,%f,%d,%s,%s,%d,%d\n",custF.customer_id,custF.cust_name,custF.item,custF.item_price,custF.code,custF.email_ID,custF.address,custF.prime,custF.pincode);
     fclose(f);
     removeEmptyLines("customer.csv");
 }
