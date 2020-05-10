@@ -240,7 +240,7 @@ void asscustemp(employee emp[],customer c[],int emp_size,int cust_size)
     {
         for(j=0;j<cust_size;j++)
         {
-            if(emp[i].area_code=c[i].pincode)
+            if(emp[i].area_code==c[j].pincode)
             {
                emp[i].c[j]=c[j];
                n[j]++;
