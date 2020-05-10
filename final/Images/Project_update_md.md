@@ -50,7 +50,7 @@ like-  Name, Phone Number , Address, If the item is fragile.
 		
  1.Prime Membership.
 	
-2.Fragility of Product to be delivered.  
+2.Whether the product is fragile or not.  
 ___
 ___
 
