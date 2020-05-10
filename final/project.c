@@ -261,7 +261,7 @@ void buildmaxheap(customer arr[],int n)
 {
     int i;
     for(i=(n-1)/2;i>=0;i--)
-        maxheapify(arr[i].priority,n,i);
+        maxheapify(arr,n,i);
 }
 
 int parent(int i)
@@ -279,22 +279,22 @@ int right(int i)
     return 2*i+2;
 }
 
-void maxheapify(int arr[], int n, int i)
+void maxheapify(customer arr[], int n, int i)
 {
     int l,r,largest,temp;
     l=left(i);
     r=right(i);
-    if(l<n&&arr[l]>arr[i])
+    if(l<n&&arr[l].priority>arr[i].priority)
         largest=l;
     else
         largest=i;
-    if(r<n&&arr[r]>arr[largest])
+    if(r<n&&arr[r.priority]>arr[largest].priority)
         largest=r;
     if(largest!=i)
     {
         temp=arr[i];
-        arr[i]=arr[largest];
-        arr[largest]=temp;
+        arr[i].priority=arr[largest].priority;
+        arr[largest].priority=temp;
         maxheapify(arr,n,largest);
     }
 }
