@@ -6,8 +6,8 @@
 
 
 
-### Usage
----
+## Usage
+
 You are greeted by a Main Menu asking the following options - 
 
   ![](https://raw.githubusercontent.com/shivang-madhwal/DS_Project_2020/master/final/Images/Img1.png)
@@ -56,4 +56,32 @@ ___
 
 
 #### 3. **Exit the program**.
+___
+
+## Installation
+
+The Zip file contains-
+
+- test_project.c
+
+- project.h
+
+- project.c
+
+- ReadMe
+
+- PDF 
+___
+
+## Contributions
+
+ - **Ridham Bhagat**: ReadEmployeeData(),ReadCustomerData(),WriteEmployeeData(),WriteCustData(), getemployee().
+ 
+ - **Arinjay Srivastava**: assign_priority(), create(), project.h .
+ 
+ - **Aryaman Rana**: Readme(using Markdown), get_cust_data(), employee structure,int main().
+  
+ - **Shivang Madhwal**: Pdf, getcust(), customer structure.
+  
+ - **Prabhat Singh Gaur**: maxheapify(), input_employee(),printemployee().
 ___
