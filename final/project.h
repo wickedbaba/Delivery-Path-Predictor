@@ -35,7 +35,7 @@ void buildmaxheap(customer *,int);
 int parent(int);
 int left(int);
 int right(int);
-void maxheapify(int *,int,int);
+void maxheapify(customer *,int,int);
 void get_cust_data(customer);
 void input_employee(employee);
 void print_employee(employee);
