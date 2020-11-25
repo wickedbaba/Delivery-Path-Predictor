@@ -90,7 +90,7 @@ The Zip file contains-
 - customer.csv
 ___
 
-## Contributions
+## Contributors
 
 - **Aryaman Singh Rana**
  
