@@ -92,14 +92,15 @@ ___
 
 ## Contributions
 
- - **Ridham Bhagat**: ReadEmployeeData(),ReadCustomerData(),WriteEmployeeData(),WriteCustData(), getemployee().
+- **Aryaman Singh Rana**
  
- - **Arinjay Srivastava**: 
-assign_priority(), create(), project.h .
+- **Arinjay Srivastava**
+  
+- **Prabhat Singh Gaur**
+
+- **Ridham Bhagat**
  
- - **Aryaman Rana**: Readme(using Markdown), get_cust_data(), employee structure,int main().
+- **Shivang Madhwal**
   
- - **Shivang Madhwal**: Pdf, getcust(), customer structure.
-  
- - **Prabhat Singh Gaur**: maxheapify(), input_employee(),printemployee().
+
 ___
